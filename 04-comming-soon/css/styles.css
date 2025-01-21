@@ -150,7 +150,7 @@ body {
     position: absolute;
     left: 50%; /* Position it exactly between sections */
     top: 0;
-    width: 50px; /* Adjust fade width for a better transition */
+    width: 35px; /* Adjust fade width for a better transition */
     height: 100vh;
     background: linear-gradient(to left, rgb(12 11 11 / 0%), rgb(151 151 151));
     pointer-events: none; /* Prevents interaction issues */
