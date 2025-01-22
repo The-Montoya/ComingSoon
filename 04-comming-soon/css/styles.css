@@ -127,6 +127,17 @@ body {
     font-family: Arial, sans-serif;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Left section with background image */
 .left-section {
     position: absolute;
     left: 0;
@@ -136,6 +147,7 @@ body {
     background: url('images/pexels-knownasovan-57690-Photoroom.png') no-repeat center center/cover;
 }
 
+/* Right section with content */
 .right-section {
     position: absolute;
     right: 0;
@@ -152,9 +164,38 @@ body {
     top: 0;
     width: 35px; /* Adjust fade width for a better transition */
     height: 100vh;
-    background: linear-gradient(to left, rgb(12 11 11 / 0%), rgb(151 151 151));
+    background: linear-gradient(to left, rgba(12, 11, 11, 0), rgb(151, 151, 151));
     pointer-events: none; /* Prevents interaction issues */
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .left-section, .right-section {
+        position: relative;
+        width: 100%;
+        height: 50vh; /* Stack sections vertically */
+    }
+
+    .fade-effect {
+        left: 0; /* Adjust for vertical stacking */
+        top: 50%;
+        width: 100%;
+        height: 35px; /* Fade effect for top-bottom transition */
+        background: linear-gradient(to bottom, rgba(12, 11, 11, 0), rgb(151, 151, 151));
+    }
+}
+
+@media (max-width: 480px) {
+    .left-section, .right-section {
+        height: 40vh; /* Smaller height for mobile screens */
+    }
+
+    .fade-effect {
+        top: 50%;
+        height: 25px; /* Smaller fade effect for smaller screens */
+    }
+}
+
 
 
 #normal-countdown{ text-align: center; }
